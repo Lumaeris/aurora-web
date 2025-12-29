@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Transition } from "@headlessui/react";
 import { DownloadIcon, MenuIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { Link, usePathname } from "@/i18n/routing";
+import { Link, usePathname, useRouter } from "@/i18n/routing";
 import LanguageSelector from "@/components/LanguageSelector";
 import DownloadBtn from "@/components/download-btn";
 
@@ -18,6 +18,7 @@ const SharedNavbar = ({ variant = "page", onScrollTo }: SharedNavbarProps) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const pathname = usePathname();
   const t = useTranslations("Navbar");
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
