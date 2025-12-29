@@ -15,6 +15,7 @@ import {
   ChevronDown,
   User,
   Image,
+  Palette,
 } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import useEmblaCarousel from "embla-carousel-react";
@@ -127,7 +128,11 @@ function CategoryCarousel({
                   className={`relative overflow-hidden ${isWallpaper ? "aspect-video" : "aspect-square"}`}
                 >
                   <img
-                    src={artwork.thumbnail || artwork.profilePicture || artwork.image}
+                    src={
+                      artwork.thumbnail ||
+                      artwork.profilePicture ||
+                      artwork.image
+                    }
                     alt={artwork.title}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
@@ -262,7 +267,29 @@ export default function ArtGalleryPage() {
           </p>
         </div>
 
-        {/* Category Carousels */}
+        <div className="mb-16 rounded-2xl border border-pink-500/30 p-6 backdrop-blur-sm">
+          <div className="flex flex-col items-center gap-4 text-center md:flex-row md:text-left">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-pink-500/20">
+              <Palette className="h-6 w-6 text-pink-400" />
+            </div>
+            <div className="flex-1">
+              <h3 className="mb-1 text-lg font-semibold text-white">
+                {t("contribute-title")}
+              </h3>
+              <p className="text-zinc-400">{t("contribute-description")}</p>
+            </div>
+            <a
+              href="https://github.com/ublue-os/artwork"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex shrink-0 items-center gap-2 rounded-full bg-pink-500/20 px-5 py-2.5 font-medium text-pink-400 transition-colors hover:bg-pink-500/30"
+            >
+              {t("contribute-button")}
+              <ExternalLink className="h-4 w-4" />
+            </a>
+          </div>
+        </div>
+
         {categories.map((category) => (
           <CategoryCarousel
             key={category}
@@ -274,7 +301,6 @@ export default function ArtGalleryPage() {
         ))}
       </main>
 
-      {/* Image Viewer Modal */}
       <AnimatePresence>
         {selectedArtwork && (
           <motion.div
@@ -385,7 +411,6 @@ export default function ArtGalleryPage() {
               </div>
             </div>
 
-            {/* Image container */}
             <div
               className="relative flex h-full w-full cursor-grab items-center justify-center overflow-hidden active:cursor-grabbing"
               onClick={(e) => e.stopPropagation()}
@@ -406,7 +431,6 @@ export default function ArtGalleryPage() {
               />
             </div>
 
-            {/* Info panel */}
             <motion.div
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}

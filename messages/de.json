@@ -269,7 +269,7 @@
   },
   "Art-Page": {
     "title": "Aurora Kunstgalerie",
-    "subtitle": "Entdecke die Kunst, die von Menschen für Aurora erstellt wurden. Jedes Bild wurde von Künstlern gezeichnet.",
+    "subtitle": "Entdecke die Kunst, die von Menschen für Aurora erstellt wurden. Jedes Bild wurde von echten Künstlern gezeichnet.",
     "by-artist": "von",
     "sponsor-artist": "Diesen Künstler unterstützen",
     "close": "Schließen",
@@ -283,6 +283,9 @@
     "categories": {
       "characters": "Charaktere",
       "wallpapers": "Hintergrundbilder"
-    }
+    },
+    "contribute-title": "Trage deine Kunst bei",
+    "contribute-description": "Aurora spricht sich für echte Kunst von Menschen aus. Du bekommst jeden Monat einen neuen Wallpaper. Möchtest du deine eigene Kunst hier beitragen? Mach einen Pull Request auf unser Artwork Repo und füge deinen Wallpaper hinzu, dann kann ihn jeder mit brew installieren. Wenn uns deine Arbeit gefällt, kommt der Wallpaper für nächsten Monat von dir! ",
+    "contribute-button": "Füge dein Hintergrundbild hinzu!"
   }
 }

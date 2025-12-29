@@ -283,6 +283,9 @@
     "categories": {
       "characters": "Characters",
       "wallpapers": "Wallpapers"
-    }
+    },
+    "contribute-title": "Contribute Your Art",
+    "contribute-description": " Aurora is dedicated to supporting real art made by humans. Every month a new wallpaper will be delivered directly to you. Want to contribute your own? PR it to our Wallpaper repo, and anyone will be able to install it with brew. If we love your work we might commission you for next months official wallpaper.",
+    "contribute-button": "Submit Wallpaper"
   }
 }
