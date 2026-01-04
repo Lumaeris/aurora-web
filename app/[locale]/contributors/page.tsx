@@ -185,6 +185,29 @@ export default function ContributorsPage() {
           </section>
         )}
 
+        {/* Contributors Section */}
+        {contributors.length > 0 && (
+          <section className="mb-16">
+            <div className="mb-8 flex items-center gap-3">
+              <Users className="h-6 w-6 text-aurora-blue" />
+              <h2 className="text-3xl font-bold text-white">
+                {t("contributors")}
+              </h2>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {contributors.map((contributor) => (
+                <ContributorCard
+                  key={contributor.github}
+                  contributor={contributor as ContributorData}
+                  githubData={getGitHubData(contributor.github)}
+                  roleLabels={contributorsData.roles}
+                  variant="detailed"
+                />
+              ))}
+            </div>
+          </section>
+        )}
+
         {/* Emeritus Section */}
         {emeritus.length > 0 && (
           <section className="mb-16">
@@ -270,29 +293,6 @@ export default function ContributorsPage() {
                   />
                 );
               })}
-            </div>
-          </section>
-        )}
-
-        {/* Contributors Section */}
-        {contributors.length > 0 && (
-          <section className="mb-16">
-            <div className="mb-8 flex items-center gap-3">
-              <Users className="h-6 w-6 text-aurora-blue" />
-              <h2 className="text-3xl font-bold text-white">
-                {t("contributors")}
-              </h2>
-            </div>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {contributors.map((contributor) => (
-                <ContributorCard
-                  key={contributor.github}
-                  contributor={contributor as ContributorData}
-                  githubData={getGitHubData(contributor.github)}
-                  roleLabels={contributorsData.roles}
-                  variant="detailed"
-                />
-              ))}
             </div>
           </section>
         )}

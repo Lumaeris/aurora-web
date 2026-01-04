@@ -32,9 +32,13 @@
       "sponsorLink": "https://github.com/sponsors/daegalus"
     },
     {
-      "github": "dreamyukii",
+      "github": "ahmedadan",
       "role": "contributor",
-      "sponsorLink": "https://github.com/dreamyukii"
+      "sponsorLink": "https://github.com/sponsors/ahmedadan"
+    },
+    {
+      "github": "dreamyukii",
+      "role": "contributor"
     },
     {
       "github": "chandeleer1698",
@@ -58,10 +62,6 @@
       "role": "special-guest",
       "title": "Readymade installation experience (Fyra Labs)",
       "sponsorLink": "https://github.com/sponsors/madonuko"
-    },
-    {
-      "github": "dreamyukii",
-      "role": "ublue"
     },
     {
       "github": "HikariKnight",
