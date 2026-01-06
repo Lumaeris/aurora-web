@@ -26,8 +26,8 @@ export interface GitHubUserData {
   id: number;
   avatar_url: string;
   html_url: string;
-  name?: string;
-  bio?: string;
+  name?: string | null;
+  bio?: string | null;
 }
 
 interface ContributorCardProps {
